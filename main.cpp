@@ -13,7 +13,11 @@ int main()
 
     cout << endl;
 
-    string pasisveikinimas = "Sveikas, " + vardas + "!";
+
+    auto galune = vardas.back();
+
+
+    string pasisveikinimas = (galune == 's' ? "Sveikas, " : "Sveika, ") + vardas + "!";
 
     int lineLength = pasisveikinimas.length() + 4;
 
