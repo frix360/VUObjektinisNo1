@@ -1,3 +1,8 @@
+## Programos tikslas
+
+  - `Atspausdinti įrėmintą pasisveikinimą`
+  - `Leisti vartotojui pasirinkti rėmelio dydį`
+
 ## Įdiegimas (Unix kompiuteryje) naudojant `Clang`kompiliatorių 
 
 - `git clone https://github.com/frix360/VUObjektinisNo1.git`
@@ -22,10 +27,6 @@
 **Pridėta**
 
 - Papildyta programa taip, kad atpažįsta vartotojo lytį ir pagal ją pakoreguoja sveikinimo tekstą
-
-**Koreguota**
-
-- Papildytas **README** failas
 
 ### [v0.1](https://github.com/frix360/VUObjektinisNo1/releases/tag/v0.1) - (2018-02-11)
 
