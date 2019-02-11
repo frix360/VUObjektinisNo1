@@ -13,15 +13,16 @@ void printLine(int length, string str) {
 int main()
 {
     string vardas;
-    int dydis;
+    int dydis = 9999;
 
     printf("Koks jusu vardas: ");
     cin >> vardas;
 
-    printf("\n");
-    printf("Iveskite remelio dydi ");
-
-    cin >> dydis;
+    while (dydis < 1 || dydis > 10) {
+        printf("\n");
+        printf("Iveskite remelio dydi (nuo 1 iki 10): ");
+        cin >> dydis;
+    }
 
     printf("\n \n");
 
@@ -45,6 +46,8 @@ int main()
     }
 
     printLine(horLength, "*");
+
+    cin.get();
 
     return 0;
 }
