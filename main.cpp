@@ -1,49 +1,50 @@
 #include <iostream>
-#include <string>
+#include <stdio.h>
+
+
 using namespace std;
 
+
+void printLine(int length, string str) {
+ for(int i = 0; i < length; i++) {
+    printf(str.c_str());
+ }
+}
 int main()
 {
-
     string vardas;
+    int dydis;
 
-    cout << "Iveskite varda: " << endl;
-
+    printf("Koks jusu vardas: ");
     cin >> vardas;
 
-    cout << endl;
+    printf("\n");
+    printf("Iveskite remelio dydi ");
+
+    cin >> dydis;
+
+    printf("\n \n");
+
+    string pasisveikinimas = "Sveikas, " + vardas + "!";
+
+    int horLength = (pasisveikinimas.length() + dydis * 2) + 2;
+    int vertLength = dydis * 2 + 1;
+
+    printLine(horLength, "*");
+    printf("\n");
 
 
-    auto galune = vardas.back();
+    for (int i = 0; i < vertLength; i++) {
+        if (i == vertLength / 2)
+            printf("%*c%s%*c", -dydis-1,'*', pasisveikinimas.c_str(), dydis+1, '*');
 
+        else
+            printf("%c%*c", '*', horLength-1, '*');
 
-    string pasisveikinimas = (galune == 's' ? "Sveikas, " : "Sveika, ") + vardas + "!";
-
-    int lineLength = pasisveikinimas.length() + 4;
-
-    string eil1;
-    string eil2;
-    string eil3;
-    string eil4;
-    string eil5;
-
-    for (int i = 0; i < lineLength; i++) {
-        eil1 += "*";
+        printf("\n");
     }
 
-    eil2 += "*";
-    for (int i = 0; i < lineLength-2; i++) {
-        eil2 += " ";
-    }
-    eil2 += "*";
-
-    eil3 = "* " + pasisveikinimas + " *";
-
-
-    eil4 = eil2;
-    eil5 = eil1;
-
-    cout << eil1 << endl << eil2 << endl << eil3 << endl << eil4 << endl << eil5;
+    printLine(horLength, "*");
 
     return 0;
 }
